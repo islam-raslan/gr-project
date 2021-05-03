@@ -3,6 +3,8 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Customercontroler;
 use App\Http\Controllers\admin;
+use App\Http\Controllers\adminDBcontroller;
+//use App\Http\Controllers\sliderController;
 //use app\Http\Controllers\userAuth;
 
 
@@ -39,7 +41,18 @@ use App\Http\Controllers\admin;
     Route::post('customer_login',[Customercontroler::class,'coustomerLogin']);
     
     
-   
+    //dashBord route
+    Route::view('adminDashbord','adminDashBord');
+    Route::get('adminDashbord',[adminDBcontroller::class,'show']);
+    Route::post('adminDashbord',[adminDBcontroller::class,'addData']);
+        //Route::put('adminDashbord/update',[adminDBcontroller::class,'update']);
+        // Route::get('/test', function () {
+    //     return view('test', ['name' => "hi"]);
+    // });
+
+    //Route::put('test',[adminController::class,'update']);
+    //Route::get('admin',[sliderController::class,'showslider']);
+    
     
     
     

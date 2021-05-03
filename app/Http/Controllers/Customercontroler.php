@@ -2,11 +2,10 @@
 
 namespace App\Http\Controllers;
 
-use Illuminate\Http\Request;
- use App\Models\customer;
- use Illuminate\Support\Facades\DB;
-class Customercontroler extends Controller
-{
+    use Illuminate\Http\Request;
+    use App\Models\customer;
+    use Illuminate\Support\Facades\DB;
+class Customercontroler extends Controller{
     
      function AddCustomer(Request $req){
          $email = $req->input()['email'];
